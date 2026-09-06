@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Right Click Unlocked</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" width="40" height="40" alt="">
+    <div><h1>Right Click Unlocked</h1><p>Your browser, your controls.</p></div>
+  </header>
+  <main>
+    <section class="site-card" aria-label="Website settings">
+      <div class="site-line"><span class="eyebrow">THIS WEBSITE</span><span id="badge">Loading</span></div>
+      <p id="hostname">Checking this tab…</p>
+      <label class="switch-row" for="enabled">
+        <span>Restore browser controls</span>
+        <input id="enabled" type="checkbox" role="switch" disabled>
+        <span class="switch" aria-hidden="true"></span>
+      </label>
+    </section>
+    <ul aria-label="Restored controls">
+      <li><span aria-hidden="true">✓</span> Right-click menu</li>
+      <li><span aria-hidden="true">✓</span> Text selection</li>
+      <li><span aria-hidden="true">✓</span> Copy &amp; select-all shortcuts</li>
+    </ul>
+    <p id="status" role="status" aria-live="polite">Loading settings…</p>
+    <button id="refresh" type="button" hidden>Refresh this page</button>
+  </main>
+  <footer>Works locally. No tracking or clipboard access.</footer>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gupdate xmlns="http://www.google.com/update2/response" protocol="2.0">
+  <app appid="ihnphnpbicfkhddgbnakkcngibdlkahk">
+    <updatecheck codebase="https://felipehertzer.github.io/right-click-unlocked/right-click-unlocked-1.0.0.crx" version="1.0.0" prodversionmin="119.0.0.0" />
+  </app>
+</gupdate>

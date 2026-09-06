@@ -1,0 +1,6 @@
+/* USER-origin !important also overrides a site's inline !important rules. */
+*:not(input):not(textarea):not(select):not(button) {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default !important;
+}

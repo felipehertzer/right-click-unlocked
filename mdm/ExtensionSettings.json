@@ -1,0 +1,7 @@
+{
+  "ihnphnpbicfkhddgbnakkcngibdlkahk": {
+    "installation_mode": "force_installed",
+    "update_url": "https://felipehertzer.github.io/right-click-unlocked/updates.xml",
+    "override_update_url": true
+  }
+}

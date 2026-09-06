@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Right Click Unlocked",
+  "version": "1.0.0",
+  "minimum_chrome_version": "119",
+  "description": "Restore right-click, text selection, and copying. Turn it on or off for each website.",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Right Click Unlocked",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true
+    }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAskEa7BWcBivQNABJYs8g2Z6LWVIW8v/Xtp6kyjemKhH4Y861z9OhlmustUnBBB8vyalRQA0dIEKMDkiF60ejKnVa1Ymy1SmFvic97B0N7JbKtkoezexEJ+HgLpD23JeA8f1IFj+yKyJJ0Ngd2aSTlCKdn5CXj7A2ISsvTctSGJrfexciuwUWSfQzlCPJPvNqU3V9tfJXZ7x7Cx+3EjFYHIwekhyNDHqjrjL+nl/Fb+zGz5W5tWfRaRW7oxsecbvOeiqXjNwEhfypJ8sbI7xu3GyZ4OZo+y12LDAC9inQPP/Cz27n3avJpIgmLRpFyxvmVnPyzkD8Gs4+cHRBSf+jMQIDAQAB",
+  "update_url": "https://felipehertzer.github.io/right-click-unlocked/updates.xml"
+}

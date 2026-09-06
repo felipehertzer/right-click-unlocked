@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>ExtensionSettings</key>
+			<dict>
+				<key>ihnphnpbicfkhddgbnakkcngibdlkahk</key>
+				<dict>
+					<key>installation_mode</key>
+					<string>force_installed</string>
+					<key>override_update_url</key>
+					<true/>
+					<key>update_url</key>
+					<string>https://felipehertzer.github.io/right-click-unlocked/updates.xml</string>
+				</dict>
+			</dict>
+			<key>PayloadDisplayName</key>
+			<string>Chrome extension policy</string>
+			<key>PayloadIdentifier</key>
+			<string>com.felipehertzer.right-click-unlocked.chrome</string>
+			<key>PayloadType</key>
+			<string>com.google.Chrome</string>
+			<key>PayloadUUID</key>
+			<string>b19d281f-6a43-57e6-9da0-7fc4e9328903</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Install and update Right Click Unlocked in managed Google Chrome.</string>
+	<key>PayloadDisplayName</key>
+	<string>Chrome — Right Click Unlocked</string>
+	<key>PayloadIdentifier</key>
+	<string>com.felipehertzer.right-click-unlocked</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>6441a241-9a7d-527b-97ff-4121ec13274a</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
