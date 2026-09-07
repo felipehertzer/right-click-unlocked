@@ -91,7 +91,8 @@ def main():
     (mdm / 'RightClickUnlocked.mobileconfig').write_bytes(plistlib.dumps(profile))
     info = {'extension_id':extension_id, 'version':version, 'update_url':BASE + '/updates.xml', 'package_url':BASE + '/' + filename, 'sha256':hashlib.sha256(package).hexdigest()}
     (docs / 'release.json').write_text(json.dumps(info, indent=2) + '\n')
-    (docs / 'index.html').write_text(f'<!doctype html><html lang="en"><meta charset="utf-8"><title>Right Click Unlocked</title><body><h1>Right Click Unlocked</h1><p>Chrome extension for restoring right-click, text selection, and copying.</p><p>Enterprise update feed: <a href="updates.xml">updates.xml</a></p><p>Extension ID: <code>{extension_id}</code></p><p><a href="https://github.com/felipehertzer/right-click-unlocked">Source and MDM installation instructions</a></p></body></html>')
+    # The landing page is maintained in docs/ and reads release.json for the version.
+    # Publishing a new extension package must not replace it.
     print(json.dumps(info, indent=2))
 
 if __name__ == '__main__':

@@ -1,1 +1,445 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><title>Right Click Unlocked</title><body><h1>Right Click Unlocked</h1><p>Chrome extension for restoring right-click, text selection, and copying.</p><p>Enterprise update feed: <a href="updates.xml">updates.xml</a></p><p>Extension ID: <code>ihnphnpbicfkhddgbnakkcngibdlkahk</code></p><p><a href="https://github.com/felipehertzer/right-click-unlocked">Source and MDM installation instructions</a></p></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#14785b" />
+    <meta
+      name="description"
+      content="Bring back right-click, text selection, and copying in Chrome. Right Click Unlocked works locally, with a pause switch for every website and no tracking."
+    />
+    <title>Right Click Unlocked — Your browser, your controls.</title>
+    <link rel="icon" href="assets/icon32.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="page.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="brand" href="./" aria-label="Right Click Unlocked home"
+        ><img src="assets/icon128.png" alt="" width="40" height="40" /><span
+          >Right Click<br />Unlocked<span class="brand-dot">.</span></span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#features">Why Unlocked</a><a href="#install">Installation</a
+        ><a
+          class="nav-github"
+          href="https://github.com/felipehertzer/right-click-unlocked"
+          >GitHub <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <a class="header-cta" href="#install"
+        >Get Unlocked <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> SMALL EXTENSION.
+            EVERYDAY FREEDOM.
+          </p>
+          <h1 id="hero-title">
+            Right click.<br /><span>Freely.</span
+            ><svg
+              class="headline-arrow"
+              viewBox="0 0 64 64"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M14 50 50 14M14 14h36v36"
+                stroke="currentColor"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </h1>
+          <p class="hero-description">
+            Your browser’s basic controls should stay yours. Bring back
+            right-click, text selection, and copying on websites that get in
+            your way.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-green" href="#install"
+              >Get the extension <span aria-hidden="true">↗</span></a
+            ><a
+              class="text-link"
+              href="https://github.com/felipehertzer/right-click-unlocked"
+              >Explore the source <span aria-hidden="true">→</span></a
+            >
+          </div>
+          <p class="hero-note">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M12 3 4 6v5c0 5 8 10 8 10s8-5 8-10V6l-8-3Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+              />
+              <path
+                d="m8 12 3 3 5-6"
+                stroke="currentColor"
+                stroke-width="1.7"
+              />
+            </svg>
+            Works locally. No tracking. No clipboard access.
+          </p>
+        </div>
+        <div
+          class="demo-stage"
+          aria-label="Interactive preview of restored browser controls"
+        >
+          <div class="stage-label">
+            <span class="status-dot" aria-hidden="true"></span> A LITTLE LESS
+            FRICTION
+          </div>
+          <div class="browser-preview">
+            <div class="browser-toolbar" aria-hidden="true">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <div class="address-bar">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="6"
+                    y="10"
+                    width="12"
+                    height="10"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M8 10V7a4 4 0 0 1 8 0v3"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                </svg>
+                a-website.example
+              </div>
+              <span>+</span>
+            </div>
+            <div class="sample-page">
+              <div class="sample-header">
+                <span>THE EVERYDAY</span><span aria-hidden="true">☰</span>
+              </div>
+              <p class="sample-category">
+                NOTES FROM THE WEB &nbsp; / &nbsp; 01
+              </p>
+              <h2>Good ideas are<br />worth keeping.</h2>
+              <div id="sample-text" class="sample-text">
+                <p>
+                  Find something useful.<br /><span class="highlight"
+                    >Select it. Copy it.</span
+                  ><br />Keep the good ideas.
+                </p>
+              </div>
+              <div class="sample-footer">
+                <span class="sample-avatar" aria-hidden="true">E</span
+                ><span
+                  >The everyday reader <span aria-hidden="true">·</span> 2 min
+                  read</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="extension-preview">
+            <div class="extension-heading">
+              <img
+                src="assets/icon128.png"
+                alt=""
+                width="34"
+                height="34"
+              /><span
+                >Right Click Unlocked<small
+                  >Your browser, your controls.</small
+                ></span
+              >
+            </div>
+            <div class="extension-site">
+              <span>THIS WEBSITE</span><span id="demo-badge">Unlocked</span>
+            </div>
+            <label class="demo-switch-label" for="demo-enabled"
+              ><span>Restore browser controls</span
+              ><input
+                type="checkbox"
+                id="demo-enabled"
+                role="switch"
+                checked /><span class="switch-track" aria-hidden="true"></span
+            ></label>
+            <ul class="demo-checks">
+              <li><span aria-hidden="true">✓</span> Right-click menu</li>
+              <li><span aria-hidden="true">✓</span> Text selection</li>
+              <li><span aria-hidden="true">✓</span> Copy shortcuts</li>
+            </ul>
+          </div>
+          <p class="demo-caption" id="demo-status" role="status">
+            Try the switch. Then select the text above.
+          </p>
+          <span class="demo-version"
+            >CHROME EXTENSION <span data-version>MANIFEST V3</span></span
+          >
+        </div>
+      </section>
+      <section
+        class="features wrap"
+        id="features"
+        aria-labelledby="features-title"
+      >
+        <div class="section-intro">
+          <p class="eyebrow">THE BASICS, BACK WHERE THEY BELONG</p>
+          <h2 id="features-title">Less friction.<br />More browsing.</h2>
+          <p>
+            Three familiar actions.<br />One small extension to bring them back.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-icon" aria-hidden="true"
+              ><svg viewBox="0 0 28 28" fill="none">
+                <path
+                  d="m7 4 15 12-8 1-4 7L7 4Z"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linejoin="round"
+                /></svg></span
+            ><span class="feature-number">01 /</span>
+            <h3>Right-click, restored.</h3>
+            <p>
+              Get your browser’s context menu back when a website tries to block
+              it.
+            </p>
+          </article>
+          <article>
+            <span class="feature-icon" aria-hidden="true"
+              ><svg viewBox="0 0 28 28" fill="none">
+                <path
+                  d="M8 5h12M14 5v18M8 23h12M4 10v8M24 10v8"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                /></svg></span
+            ><span class="feature-number">02 /</span>
+            <h3>Select what matters.</h3>
+            <p>
+              Highlight a useful passage, a detail, or a thought you want to
+              come back to.
+            </p>
+          </article>
+          <article>
+            <span class="feature-icon" aria-hidden="true"
+              ><svg viewBox="0 0 28 28" fill="none">
+                <rect
+                  x="9"
+                  y="9"
+                  width="14"
+                  height="15"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                />
+                <path
+                  d="M18 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                /></svg></span
+            ><span class="feature-number">03 /</span>
+            <h3>Copy. Carry on.</h3>
+            <p>
+              Restore familiar copy and select-all shortcuts. Keep your workflow
+              moving.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="privacy-band" aria-labelledby="privacy-title">
+        <div class="wrap privacy-layout">
+          <div>
+            <p class="eyebrow">QUIET BY DESIGN</p>
+            <h2 id="privacy-title">
+              Your data stays yours.<br />Your choices do, too.
+            </h2>
+          </div>
+          <div class="privacy-points">
+            <article>
+              <span aria-hidden="true">01</span>
+              <div>
+                <h3>It works right in your browser.</h3>
+                <p>
+                  No analytics. No external scripts. No permission to read or
+                  write your clipboard.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span aria-hidden="true">02</span>
+              <div>
+                <h3>Pause it on any website.</h3>
+                <p>
+                  A site has its own editor or custom menu? Flip the switch.
+                  Your choice is saved for that hostname.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        class="install wrap"
+        id="install"
+        aria-labelledby="install-title"
+      >
+        <div class="section-intro">
+          <p class="eyebrow">MAKE YOURSELF AT HOME</p>
+          <h2 id="install-title">One extension.<br />Two ways to install.</h2>
+          <p>
+            For your own browser.<br />Or every browser on your managed team.
+          </p>
+        </div>
+        <div class="installation-grid">
+          <article class="installation-card">
+            <div class="card-heading">
+              <span class="eyebrow">FOR YOUR BROWSER</span
+              ><span class="card-tag">Chrome 119+</span>
+            </div>
+            <h3>Get up and running.</h3>
+            <p>
+              Load the extension directly in Chrome using Developer mode. No
+              store account needed.
+            </p>
+            <ol class="install-steps">
+              <li>
+                <span>1</span>
+                <div>Download the source ZIP and extract it.</div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  Open <code>chrome://extensions</code> and turn on
+                  <strong>Developer mode</strong>.
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  Click <strong>Load unpacked</strong>, select the
+                  <code>extension</code> folder, and refresh your open tabs.
+                </div>
+              </li>
+            </ol>
+            <a
+              class="button button-green"
+              href="https://github.com/felipehertzer/right-click-unlocked/archive/refs/heads/main.zip"
+              >Download source ZIP <span aria-hidden="true">↓</span></a
+            >
+          </article>
+          <article class="installation-card managed-card">
+            <div class="card-heading">
+              <span class="eyebrow">FOR YOUR TEAM</span
+              ><span class="card-tag">Managed Chrome</span>
+            </div>
+            <h3>A familiar setup for IT.</h3>
+            <p>
+              Deploy a signed extension with Chrome policies and a self-hosted
+              update feed.
+            </p>
+            <ul class="managed-list">
+              <li>
+                <span aria-hidden="true">✓</span> macOS configuration profile
+              </li>
+              <li>
+                <span aria-hidden="true">✓</span> Chrome extension policy
+                templates
+              </li>
+              <li>
+                <span aria-hidden="true">✓</span> Signed CRX3 packages and
+                updates
+              </li>
+            </ul>
+            <p class="managed-note">
+              Requires a supported managed Chrome environment. Check the
+              platform requirements before deploying.
+            </p>
+            <a
+              class="button button-outline"
+              href="https://github.com/felipehertzer/right-click-unlocked#managed-deployment"
+              >Managed setup guide <span aria-hidden="true">↗</span></a
+            >
+          </article>
+        </div>
+        <div class="deployment-details">
+          <div class="feed-heading">
+            <div>
+              <h3>The update feed</h3>
+              <p>For your Chrome deployment policy.</p>
+            </div>
+            <a href="updates.xml">View XML <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="feed-code">
+            <code id="update-feed"
+              >https://felipehertzer.github.io/right-click-unlocked/updates.xml</code
+            ><button
+              type="button"
+              id="copy-feed"
+              aria-label="Copy update feed URL"
+            >
+              Copy
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect
+                  x="8"
+                  y="8"
+                  width="12"
+                  height="13"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                />
+                <path
+                  d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="release-details">
+            <p>Extension ID <code>ihnphnpbicfkhddgbnakkcngibdlkahk</code></p>
+            <a id="package-link" href="release.json"
+              >Release details <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <p id="copy-status" class="copy-status" role="status"></p>
+        </div>
+        <details class="compatibility">
+          <summary>
+            Will it work on every website?<span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            <p>
+              Unlocked restores common event-based and CSS restrictions. It
+              can’t reveal inaccessible content or turn images and canvas
+              elements into selectable text.
+            </p>
+            <p>
+              Chrome’s internal pages, the Web Store, built-in viewers, and
+              local files are excluded. Some custom blockers may persist. If a
+              website’s controls or copy formatting behave differently, pause
+              the extension for that site.
+            </p>
+          </div>
+        </details>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <a class="brand" href="./"
+        ><img src="assets/icon128.png" alt="" width="30" height="30" /><span
+          >Right Click Unlocked</span
+        ></a
+      >
+      <p>
+        Made by <a href="https://github.com/felipehertzer">Felipe Hertzer</a>
+      </p>
+      <a href="updates.xml">Update feed <span aria-hidden="true">↗</span></a>
+    </footer>
+  </body>
+</html>

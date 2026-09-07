@@ -41,6 +41,12 @@ Clone the repository, open `chrome://extensions`, enable Developer mode, and cho
 
 ## Publishing updates
 
+The landing page lives in `docs/index.html`, `docs/styles.css`, and `docs/page.js`.
+Preview it with `python3 -m http.server 4173 --directory docs`. It reads the current
+version and signed-package URL from `docs/release.json`; packaging an extension
+update preserves the page. Run `python3 scripts/build_site.py` to validate local
+links and the package checksum, and stage the static page in `dist/` for hosting.
+
 Requires Python 3, OpenSSL, and the original private signing key (kept outside this repository).
 
 1. Make changes in `extension/` and increment `extension/manifest.json`'s version.
